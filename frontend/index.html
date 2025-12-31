@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Axy Project</title>
+</head>
+<body>
+  <h1>I am Mamatha,Working on Axy Project 3 tier Architecture</h1>
+  <button onclick="callBackend()">Call Backend</button>
+  <p id="output"></p>
+
+  <script>
+    function callBackend() {
+      fetch("http://backend:5000/api/health")
+        .then(res => res.json())
+        .then(data => document.getElementById("output").innerText = JSON.stringify(data));
+    }
+  </script>
+</body>
+</html>
