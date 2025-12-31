@@ -14,8 +14,9 @@ def db_check():
         host=os.getenv("DB_HOST"),
         database=os.getenv("POSTGRES_DB"),
         user=os.getenv("POSTGRES_USER"),
-        password=os.getenv("POSTGRES_PASSWORD")
-    )
+        password=os.getenv("POSTGRES_PASSWORD"),
+        port=os.getenv("DB_PORT")
+)
     return {"db": "connected successfully"}
 
 app.run(host="0.0.0.0", port=5000)
