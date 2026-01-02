@@ -9,7 +9,7 @@ services:
     networks:
       - axynetwork
     healthcheck:
-      test: ["CMD", "pg_isready", "-U", "axyuser"]
+      test: ["CMD", "pg_isready", "-U", "axyuser", "-d", "axydb"]
       interval: 10s
       retries: 5
 
